@@ -10,7 +10,7 @@
   "license": "MIT",
   "autoload": {
     "psr-4": {
-      "Leftsky\\LaravelHelp\\": "src/"
+      "Leftsky\\ThinkphpHelp\\": "src/"
     },
     "files": [
       "src/helps.php"
