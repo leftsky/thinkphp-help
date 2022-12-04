@@ -1,0 +1,28 @@
+{
+  "name": "leftsky/thinkphp-help",
+  "description": "为Thinkphp定制的助手 function、trait、abstract。",
+  "authors": [
+    {
+      "name": "leftsky",
+      "email": "leftsky@vip.qq.com"
+    }
+  ],
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Leftsky\\LaravelHelp\\": "src/"
+    },
+    "files": [
+      "src/helps.php"
+    ]
+  },
+  "require": {
+    "php": "^7.3",
+    "topthink/framework": "dev-master",
+    "topthink/think-captcha": "^1.0",
+    "topthink/think-installer": "^1.0.14",
+    "topthink/think-queue": "1.1.6",
+    "topthink/think-helper": "^1.0.7",
+    "leftsky/php-help": "^0.0.2"
+  }
+}
