@@ -13,7 +13,7 @@ if (!function_exists('rsps')) {
     function rsps(int $code, $data = null, string $msg = null)
     {
         return $response = json([
-            "code" => define_to_status_code($code),
+            "code" => $code,
             "msg" => $msg ?? define_to_message($code),
             "data" => $data
         ]);
