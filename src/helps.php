@@ -46,8 +46,8 @@ if (!function_exists("fix_img")) {
      */
     function fix_img(string $value): string
     {
+        if ($value == "") $value = config("default.image");
         if (strstr($value, "http")) return $value;
-        if ($value == "") return config("app.default.image");
         $domain = get_cur_domain();
         return "$domain$value";
     }
