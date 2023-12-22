@@ -46,7 +46,7 @@ if (!function_exists("fix_img")) {
      */
     function fix_img(string $value): string
     {
-        if ($value == "") $value = config("default.image");
+        if ($value == "") $value = config("default.image") ? config("default.image") : "";
         if (strstr($value, "http")) return $value;
         $domain = get_cur_domain();
         return "$domain$value";
@@ -77,7 +77,7 @@ if (!function_exists("fix_article")) {
     function fix_article(string $value, string $search): string
     {
         if (strstr($value, "http")) return $value;
-        if ($value == "") return config("app.default.image");
+        if ($value == "") return config("default.image") ? config("default.image") : "";
         $domain = get_cur_domain();
         return str_replace($search, $domain . $search, $value);
     }
